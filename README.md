@@ -316,7 +316,9 @@ Article styling (`.article-hero`, `.article-body`, `.article-tip-box`, `.article
 - [x] Blog / tips section ("5 signs your grill needs cleaning")
 - [x] Add the good parts of the emoji version back
 - [x] Fix the social media icon links
-- [ ] Fix the get a quote thing
+- [x] Fix the get a quote thing
+- [ ] Do the pictures
+- [ ] Deploy
 - [ ] On Friday, automate an email to everyone seen, including a recipe
 - [ ] Google Analytics / tracking
 - [ ] Live Google Reviews widget (via Places API or third-party embed) instead of static summary
