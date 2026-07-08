@@ -1,4 +1,4 @@
-# 🔥 Firefly Propane — Website
+# Firefly Propane — Website
 
 > "Firefly, we light your fire!" — Westchester, NY's most trusted local propane & home services team.
 
