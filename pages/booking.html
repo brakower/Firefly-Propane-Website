@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book your Firefly Propane appointment online — pick a date and time for BBQ cleaning, chimney sweeping, dryer vent cleaning, or mosquito magnet service in Westchester, NY.">
+  <title>Book Online | Firefly Propane | Westchester, NY</title>
+  <link rel="icon" href="../images/firefly-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+
+    .booking-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 2.5rem;
+    }
+    .booking-step {
+      text-align: center;
+      padding: 1.25rem 1rem;
+    }
+    .booking-step i {
+      font-size: 1.8rem;
+      color: var(--fire-orange);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .booking-step strong { display: block; color: var(--sky-dark); font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .booking-step p { font-size: 0.85rem; color: var(--mid-gray); margin: 0 auto; }
+
+    .booking-alt-contact {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background: var(--fire-cream);
+      border-radius: var(--radius-md);
+    }
+    .booking-alt-contact p { margin: 0 auto 0.75rem; color: var(--charcoal); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/firefly-logo.png" alt="Firefly Propane logo">
+      <div>
+        <div class="nav-logo-text">Firefly</div>
+        <div class="nav-logo-sub">Propane</div>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="bbq.html">BBQ</a></li>
+      <li><a href="chimney.html">Chimney</a></li>
+      <li><a href="dryer-vent.html">Dryer Vent</a></li>
+      <li><a href="mosquito.html">Mosquito</a></li>
+      <li><a href="blog.html">Tips &amp; Blog</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="booking.html" class="btn btn-fire nav-cta active">Book Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <strong>Book Online</strong>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Book Your Appointment</h1>
+    <p class="tagline">Pick a service, choose a day and time that works for you, and we'll take it from there.</p>
+  </div>
+  <svg viewBox="0 0 1440 70" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:-2px;left:0;width:100%;" preserveAspectRatio="none">
+    <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#fff"/>
+  </svg>
+</section>
+
+<!-- HOW BOOKING WORKS -->
+<section class="section" style="padding-bottom:0;">
+  <div class="container">
+    <div class="booking-steps reveal">
+      <div class="booking-step">
+        <i class="ti ti-list-check" aria-hidden="true"></i>
+        <strong>1. Pick a service</strong>
+        <p>Choose the appointment type from the calendar below.</p>
+      </div>
+      <div class="booking-step">
+        <i class="ti ti-calendar" aria-hidden="true"></i>
+        <strong>2. Choose a time</strong>
+        <p>See real-time availability and pick what works for you.</p>
+      </div>
+      <div class="booking-step">
+        <i class="ti ti-mail-check" aria-hidden="true"></i>
+        <strong>3. Get confirmed</strong>
+        <p>We'll email you a confirmation with all the details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALENDLY EMBED -->
+<section class="section" style="padding-top:1rem;">
+  <div class="container">
+    <div class="calendly-wrap reveal">
+      <!--
+        SETUP: replace YOUR-CALENDLY-USERNAME below with your real Calendly scheduling link.
+        Example: https://calendly.com/firefly-propane/service-appointment
+        See README for full setup instructions, including how to set up separate event
+        types for BBQ, Chimney, Dryer Vent, and Mosquito Magnet appointments.
+      -->
+      <div class="calendly-inline-widget"
+           data-url="https://calendly.com/barrie-fireflypropane"
+           style="min-width:320px;height:700px;width:100%;">
+      </div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+
+    <div class="booking-alt-contact reveal">
+      <p>Prefer to book by phone or have a question first?</p>
+      <a href="tel:9147693336" class="btn btn-fire">Call (914) 769-3336</a>
+      <a href="../index.html#contact" class="btn btn-outline" style="margin-left:0.5rem;">Send a Message Instead</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/firefly-logo.png" alt="Firefly Propane">
+        <p>Westchester's trusted local team for BBQ, chimney, dryer vent &amp; mosquito services.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Firefly Propane on Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Firefly Propane on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.google.com/search?q=Firefly+Propane+Westchester+NY+reviews" target="_blank" rel="noopener" aria-label="Firefly Propane on Google"><i class="ti ti-brand-google" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="bbq.html">BBQ Clean &amp; Repair</a></li>
+          <li><a href="chimney.html">Chimney Sweeping</a></li>
+          <li><a href="dryer-vent.html">Dryer Vent Cleaning</a></li>
+          <li><a href="mosquito.html">Mosquito Magnets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="../index.html#reviews">Reviews</a></li>
+          <li><a href="blog.html">Tips &amp; Blog</a></li>
+          <li><a href="booking.html">Book Online</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9147693336"><i class="ti ti-phone" aria-hidden="true"></i> (914) 769-3336</a></li>
+          <li><a href="mailto:barrie@fireflypropane.com"><i class="ti ti-mail" aria-hidden="true"></i> barrie@fireflypropane.com</a></li>
+          <li>Westchester County, NY</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Firefly Propane. All rights reserved. | Made with <i class="ti ti-flame" aria-hidden="true" style="color:var(--fire-orange);"></i> in Westchester, NY</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

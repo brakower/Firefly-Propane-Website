@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mosquito Magnet installation and maintenance in Westchester, NY by Firefly Propane. Reclaim your backyard with propane-powered mosquito control.">
+  <title>Mosquito Magnets | Firefly Propane | Westchester, NY</title>
+  <link rel="icon" href="../images/firefly-logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .buzzing-banner {
+      background: var(--sky-dark);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem;
+      font-weight: 800;
+      font-size: 1.05rem;
+      letter-spacing: 0.04em;
+    }
+    .buzzing-banner i { animation: buzz 0.15s linear infinite alternate; display: inline-block; }
+    @keyframes buzz { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+
+    .how-it-works {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      counter-reset: steps;
+    }
+    .step-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 1.75rem 1.5rem;
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      position: relative;
+    }
+    .step-card::before {
+      counter-increment: steps;
+      content: counter(steps);
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient-fire);
+      color: var(--white);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step-icon { font-size: 2.2rem; margin-bottom: 0.75rem; display: block; color: var(--fire-orange); }
+    .step-card h3 { margin-bottom: 0.4rem; font-size: 1.1rem; color: var(--sky-dark); }
+    .step-card p  { font-size: 0.9rem; color: var(--mid-gray); margin: 0; }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <img src="../images/firefly-logo.png" alt="Firefly Propane logo">
+      <div>
+        <div class="nav-logo-text">Firefly</div>
+        <div class="nav-logo-sub">Propane</div>
+      </div>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="bbq.html">BBQ</a></li>
+      <li><a href="chimney.html">Chimney</a></li>
+      <li><a href="dryer-vent.html">Dryer Vent</a></li>
+      <li><a href="mosquito.html" class="active">Mosquito</a></li>
+      <li><a href="blog.html">Tips &amp; Blog</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="booking.html" class="btn btn-blue" style="padding:0.45rem 1rem;">Book Now</a></li>
+      <li><a href="../index.html#contact" class="btn btn-fire nav-cta">Get a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="container">
+    <a href="../index.html">Home</a>
+    <span>›</span>
+    <strong>Mosquito Magnets</strong>
+  </div>
+</div>
+
+<!-- BUZZING BANNER -->
+<div class="buzzing-banner">
+  <i class="ti ti-bug" aria-hidden="true"></i> &nbsp; Say goodbye to mosquito season! &nbsp; <i class="ti ti-bug" aria-hidden="true"></i>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1>Mosquito Magnet Service</h1>
+    <p class="tagline">Keep outdoor spaces pest-free with propane-powered mosquito traps and seasonal maintenance.</p>
+  </div>
+  <svg viewBox="0 0 1440 70" fill="none" xmlns="http://www.w3.org/2000/svg" style="position:absolute;bottom:-2px;left:0;width:100%;" preserveAspectRatio="none">
+    <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#fff"/>
+  </svg>
+</section>
+
+<!-- MAIN SERVICE -->
+<section class="section">
+  <div class="container">
+    <div class="two-col reveal">
+      <div>
+        <p class="section-eyebrow">What We Do</p>
+        <h2>Reclaim Your <span class="fire-text">Backyard</span></h2>
+        <p style="color:var(--mid-gray);margin-bottom:1.25rem;">We offer professional mosquito magnet services to help you enjoy your outdoor spaces without the nuisance of mosquitoes. Our propane-powered mosquito traps are designed to attract and eliminate mosquitoes, providing a comfortable environment for your family and guests.</p>
+        <p style="color:var(--mid-gray);margin-bottom:1.5rem;">Our experienced technicians will install and maintain your mosquito magnet, ensuring it operates efficiently throughout the mosquito season. Enjoy your backyard gatherings without the worry of pesky insects!</p>
+
+        <div class="feature-list">
+          <div class="feature-item"><i class="ti ti-tool fi-icon" aria-hidden="true"></i><span>Professional installation at your property</span></div>
+          <div class="feature-item"><i class="ti ti-gas-station fi-icon" aria-hidden="true"></i><span>Propane refill and cartridge replacement</span></div>
+          <div class="feature-item"><i class="ti ti-calendar fi-icon" aria-hidden="true"></i><span>Seasonal maintenance visits</span></div>
+          <div class="feature-item"><i class="ti ti-map-pin fi-icon" aria-hidden="true"></i><span>Optimal placement for maximum coverage</span></div>
+          <div class="feature-item"><i class="ti ti-shield-check fi-icon" aria-hidden="true"></i><span>Family and pet safe — no harsh sprays</span></div>
+        </div>
+      </div>
+      <div>
+        <div class="img-placeholder" style="min-height:300px;">
+          <i class="ti ti-plant ph-icon" aria-hidden="true"></i>
+          <strong>Mosquito Magnet in Backyard</strong>
+          <span style="font-size:0.78rem;color:#999;">Replace with product / backyard photo</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.75rem;">
+          <div class="img-placeholder" style="min-height:140px;"><i class="ti ti-photo ph-icon" aria-hidden="true"></i><strong>Installation photo</strong></div>
+          <div class="img-placeholder" style="min-height:140px;"><i class="ti ti-users ph-icon" aria-hidden="true"></i><strong>Happy family outside</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <p class="section-eyebrow">The Science</p>
+      <h2>How the Mosquito Magnet <span class="fire-text">works</span></h2>
+      <p style="color:var(--mid-gray);margin:0.5rem auto 0;">It's not magic — it's propane-powered science that mimics human breath to lure and trap mosquitoes.</p>
+    </div>
+    <div class="how-it-works reveal">
+      <div class="step-card">
+        <i class="ti ti-gas-station step-icon" aria-hidden="true"></i>
+        <h3>Propane Converted</h3>
+        <p>The trap converts propane into CO₂, mimicking human exhalation that attracts mosquitoes.</p>
+      </div>
+      <div class="step-card">
+        <i class="ti ti-magnet step-icon" aria-hidden="true"></i>
+        <h3>Mosquitoes Attracted</h3>
+        <p>The combination of CO₂, heat, and moisture draws mosquitoes in from up to an acre away.</p>
+      </div>
+      <div class="step-card">
+        <i class="ti ti-wind step-icon" aria-hidden="true"></i>
+        <h3>Trapped &amp; Eliminated</h3>
+        <p>A powerful vacuum net captures mosquitoes where they dehydrate — no chemicals needed.</p>
+      </div>
+      <div class="step-card">
+        <i class="ti ti-trending-down step-icon" aria-hidden="true"></i>
+        <h3>Population Drops</h3>
+        <p>Over 7–10 days, the local mosquito population is significantly reduced. Results build season over season.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="section">
+  <div class="container">
+    <div class="two-col reverse reveal">
+      <div>
+        <p class="section-eyebrow">The Perks</p>
+        <h2>Enjoy your yard <span class="fire-text">all season long</span></h2>
+        <p style="color:var(--mid-gray);margin-bottom:1.5rem;">Whether it's a summer BBQ, a kids' birthday party, or just a quiet evening on the porch — with Firefly's Mosquito Magnet service, you can actually enjoy your outdoor space again.</p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div style="background:var(--fire-cream);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+            <i class="ti ti-leaf" aria-hidden="true" style="font-size:1.6rem;color:var(--fire-orange);margin-bottom:0.25rem;display:block;"></i>
+            <strong style="font-size:0.9rem;color:var(--sky-dark);">Eco-Friendly</strong>
+            <p style="font-size:0.82rem;color:var(--mid-gray);margin:0.25rem 0 0;">No spray chemicals that harm other insects</p>
+          </div>
+          <div style="background:var(--fire-cream);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+            <i class="ti ti-paw" aria-hidden="true" style="font-size:1.6rem;color:var(--fire-orange);margin-bottom:0.25rem;display:block;"></i>
+            <strong style="font-size:0.9rem;color:var(--sky-dark);">Pet Safe</strong>
+            <p style="font-size:0.82rem;color:var(--mid-gray);margin:0.25rem 0 0;">Safe for dogs, cats, and children</p>
+          </div>
+          <div style="background:var(--fire-cream);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+            <i class="ti ti-home-2" aria-hidden="true" style="font-size:1.6rem;color:var(--fire-orange);margin-bottom:0.25rem;display:block;"></i>
+            <strong style="font-size:0.9rem;color:var(--sky-dark);">Up to 1 Acre</strong>
+            <p style="font-size:0.82rem;color:var(--mid-gray);margin:0.25rem 0 0;">Covers large outdoor areas effectively</p>
+          </div>
+          <div style="background:var(--fire-cream);border-radius:var(--radius-sm);padding:1rem;text-align:center;">
+            <i class="ti ti-repeat" aria-hidden="true" style="font-size:1.6rem;color:var(--fire-orange);margin-bottom:0.25rem;display:block;"></i>
+            <strong style="font-size:0.9rem;color:var(--sky-dark);">Seasonal Service</strong>
+            <p style="font-size:0.82rem;color:var(--mid-gray);margin:0.25rem 0 0;">We handle maintenance so you don't have to</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="img-placeholder" style="min-height:360px;">
+          <i class="ti ti-sunset-2 ph-icon" aria-hidden="true"></i>
+          <strong>Family Enjoying Mosquito-Free Backyard</strong>
+          <span style="font-size:0.78rem;color:#999;">Replace with lifestyle photo of a family outdoors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <p class="section-eyebrow">Happy Yards</p>
+      <h2>Backyards we've <span class="fire-text">reclaimed</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;" class="reveal">
+      <div class="img-placeholder" style="min-height:200px;"><i class="ti ti-photo ph-icon" aria-hidden="true"></i><strong>Yard Photo 1</strong></div>
+      <div class="img-placeholder" style="min-height:200px;"><i class="ti ti-photo ph-icon" aria-hidden="true"></i><strong>Yard Photo 2</strong></div>
+      <div class="img-placeholder" style="min-height:200px;"><i class="ti ti-photo ph-icon" aria-hidden="true"></i><strong>Yard Photo 3</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header text-center reveal">
+      <p class="section-eyebrow">Common Questions</p>
+      <h2>Mosquito Magnet <span class="fire-text">FAQs</span></h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">
+          How long until I notice fewer mosquitoes?
+          <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Most customers notice a meaningful reduction within 7–10 days as the trap intercepts breeding females. Full results build over a few weeks as the local population declines.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          How much propane does the trap use?
+          <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="faq-answer">
+          <p>A standard 20 lb propane tank typically lasts 3–4 weeks of continuous operation. We handle refills and cartridge swaps as part of our seasonal maintenance visits.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Is it safe around kids and pets?
+          <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="faq-answer">
+          <p>Yes. There are no sprays or chemicals — the trap simply uses heat, CO₂, and a vacuum net. Just keep curious pets from directly investigating the unit itself.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">
+          Where's the best place to install it?
+          <i class="ti ti-chevron-down faq-chevron" aria-hidden="true"></i>
+        </button>
+        <div class="faq-answer">
+          <p>We typically place units 30–50 feet from your main gathering area, ideally near known mosquito breeding spots (shade, standing water, tall grass) to intercept them before they reach you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Stop swatting, start relaxing.</h2>
+    <p>Call Firefly today and let us set up your Mosquito Magnet before peak season hits!</p>
+    <a href="../index.html#contact" class="btn btn-outline" style="border-color:#fff;color:#fff;margin-left:0.75rem;">Get a Free Quote</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../images/firefly-logo.png" alt="Firefly Propane">
+        <p>Westchester's trusted local team for BBQ, chimney, dryer vent &amp; mosquito services.</p>
+        <div class="social-icons">
+          <a href="#" aria-label="Firefly Propane on Facebook"><i class="ti ti-brand-facebook" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Firefly Propane on Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          <a href="https://www.google.com/search?q=Firefly+Propane+Westchester+NY+reviews" target="_blank" rel="noopener" aria-label="Firefly Propane on Google"><i class="ti ti-brand-google" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="bbq.html">BBQ Clean &amp; Repair</a></li>
+          <li><a href="chimney.html">Chimney Sweeping</a></li>
+          <li><a href="dryer-vent.html">Dryer Vent Cleaning</a></li>
+          <li><a href="mosquito.html">Mosquito Magnets</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="../index.html#reviews">Reviews</a></li>
+          <li><a href="blog.html">Tips &amp; Blog</a></li>
+          <li><a href="booking.html">Book Online</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:9147693336"><i class="ti ti-phone" aria-hidden="true"></i> (914) 769-3336</a></li>
+          <li><a href="mailto:barrie@fireflypropane.com"><i class="ti ti-mail" aria-hidden="true"></i> barrie@fireflypropane.com</a></li>
+          <li>Westchester County, NY</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Firefly Propane. All rights reserved. | Made with <i class="ti ti-flame" aria-hidden="true" style="color:var(--fire-orange);"></i> in Westchester, NY</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
