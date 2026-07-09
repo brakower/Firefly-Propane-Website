@@ -19,6 +19,7 @@ Firefly-Propane-Website/
 │   ├── booking.html            ← Online booking (Calendly embed)
 │   ├── blog.html               ← Tips & Blog index
 │   └── blog-grill-signs.html   ← Article: "5 Signs Your Grill Needs Cleaning"
+│   └── blog-warranty-parts.html← Article: "Your Grill May Have Free Parts Waiting"
 │
 ├── css/
 │   └── styles.css              ← All styles (single stylesheet)
