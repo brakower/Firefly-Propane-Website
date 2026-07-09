@@ -2,50 +2,77 @@
    FIREFLY PROPANE — main.js
    ============================================================ */
 
-/* ---- Mobile nav toggle ---- */
-document.addEventListener('DOMContentLoaded', () => {
+/* ---- Partial Loader ---- */
+(function () {
+  const depth = window.location.pathname.split('/').filter(p => p.length > 0 && p.endsWith('.html') === false).length;
+  const isInSubfolder = window.location.pathname.includes('/pages/');
+  const root = isInSubfolder ? '../' : './';
 
-  const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      toggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
-    });
-
-    // Close nav on link click (mobile)
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => navLinks.classList.remove('open'));
-    });
+  function loadPartial(selector, file, callback) {
+    const el = document.querySelector(selector);
+    if (!el) return;
+    fetch(root + 'partials/' + file)
+      .then(r => r.text())
+      .then(html => {
+        el.outerHTML = html.replaceAll('__ROOT__', root);
+        if (callback) callback();
+      })
+      .catch(err => console.warn('Could not load partial:', file, err));
   }
 
-  /* ---- Mark active nav link ---- */
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
+  document.addEventListener('DOMContentLoaded', function () {
+    loadPartial('#nav-placeholder', 'nav.html', function () {
+      initAfterNav();
+    });
+    loadPartial('#footer-placeholder', 'footer.html');
   });
 
-  /* ---- Firefly dot animation (hero) ---- */
-  const container = document.querySelector('.hero-fireflies');
-  if (container) {
-    for (let i = 0; i < 18; i++) {
-      const dot = document.createElement('div');
-      dot.classList.add('ff-dot');
-      const size = Math.random() * 8 + 4;
-      dot.style.cssText = `
-        width: ${size}px; height: ${size}px;
-        top: ${Math.random() * 90}%;
-        left: ${Math.random() * 95}%;
-        animation-delay: ${Math.random() * 5}s;
-        animation-duration: ${3 + Math.random() * 4}s;
-      `;
-      container.appendChild(dot);
+  function initAfterNav() {
+    /* ---- Mobile nav toggle ---- */
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    if (toggle && navLinks) {
+      toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', navLinks.classList.contains('open'));
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => navLinks.classList.remove('open'));
+      });
+    }
+
+    /* ---- Mark active nav link ---- */
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      const href = link.getAttribute('href') || '';
+      const linkPage = href.split('/').pop().split('#')[0];
+      if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+        link.classList.add('active');
+      }
+    });
+
+    /* ---- Firefly dot animation (hero) ---- */
+    const container = document.querySelector('.hero-fireflies');
+    if (container) {
+      for (let i = 0; i < 18; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('ff-dot');
+        const size = Math.random() * 8 + 4;
+        dot.style.cssText = `
+          width: ${size}px; height: ${size}px;
+          top: ${Math.random() * 90}%;
+          left: ${Math.random() * 95}%;
+          animation-delay: ${Math.random() * 5}s;
+          animation-duration: ${3 + Math.random() * 4}s;
+        `;
+        container.appendChild(dot);
+      }
     }
   }
+})();
+
+/* ---- Everything else runs after DOM is ready ---- */
+document.addEventListener('DOMContentLoaded', () => {
 
   /* ---- Anniversary Coupon ---- */
   const couponBtn = document.getElementById('couponBtn');
@@ -59,31 +86,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- Contact form — real submission via Formspree ---- */
-  /* SETUP: replace YOUR_FORM_ID below with your real Formspree form ID (see README) */
+  /* ---- Contact form — Formspree ---- */
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-
       const success = document.querySelector('.form-success');
       const errorEl = document.querySelector('.form-error');
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
-
       if (errorEl) errorEl.classList.remove('visible');
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = 'Sending…';
       }
-
       try {
         const response = await fetch(contactForm.action, {
           method: 'POST',
           body: new FormData(contactForm),
           headers: { 'Accept': 'application/json' }
         });
-
         if (response.ok) {
           if (success) success.classList.add('visible');
           contactForm.reset();
@@ -101,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---- Scroll reveal (simple) ---- */
+  /* ---- Scroll reveal ---- */
   const revealEls = document.querySelectorAll('.reveal');
   if (revealEls.length && 'IntersectionObserver' in window) {
     const obs = new IntersectionObserver((entries) => {
@@ -120,15 +142,12 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       const item = btn.closest('.faq-item');
       const wasOpen = item.classList.contains('open');
-
-      // Close any sibling FAQ items within the same list (single-open accordion)
       const list = item.closest('.faq-list');
       if (list) {
         list.querySelectorAll('.faq-item.open').forEach(openItem => {
           if (openItem !== item) openItem.classList.remove('open');
         });
       }
-
       item.classList.toggle('open', !wasOpen);
     });
   });
