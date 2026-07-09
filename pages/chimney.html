@@ -22,7 +22,16 @@
       position: relative;
       overflow: hidden;
     }
-    .santa-quote::before { content: '\eea4'; font-family: 'tabler-icons' !important; font-size: 5rem; position: absolute; top: -10px; right: -10px; opacity: 0.12; }
+    .santa-quote::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.06);
+    }
     .santa-quote p { font-family: var(--font-body); font-size: 0.95rem; opacity: 0.85; margin: 0.5rem auto 0; max-width: 45ch; }
   </style>
 </head>
