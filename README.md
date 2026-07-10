@@ -216,7 +216,7 @@ The homepage contact form (`#contactForm`) now posts to **Formspree** instead of
    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
    ```
 4. Replace `YOUR_FORM_ID` with your real ID
-5. Formspree will email new submissions straight to the inbox you verify with them (e.g. barrie@fireflypropane.com)
+5. Formspree will email new submissions straight to the inbox
 
 The JS in `main.js` submits the form via `fetch()`, shows `.form-success` on a 200 response, and shows `.form-error` (with a fallback phone number) if anything fails — no page reload needed.
 
@@ -335,7 +335,7 @@ Article styling (`.article-hero`, `.article-body`, `.article-tip-box`, `.article
 | **Business** | Firefly Propane |
 | **Location** | Westchester County, NY |
 | **Phone** | (914) 769-3336 |
-| **Email** | barrie@fireflypropane.com |
+| **Email** | attached to form |
 | **Service Area** | Westchester County, NY & Lower Fairfield County, CT |
 | **Slogan** | "Firefly, we light your fire!" |
 
